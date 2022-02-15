@@ -1,10 +1,9 @@
 import styled from "styled-components";
 
 export const Container = styled.section`
-  margin-top: 12rem;
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 2rem;
+  margin: 12rem auto 0px;
+  width: 62%;
+  text-align: justify;
 
   .hard-skills {
     margin-top: 1.6rem;
@@ -25,14 +24,9 @@ export const Container = styled.section`
   }
 
   h2 {
-    display: inline-block;
-    margin-bottom: 2rem;
-    border-bottom: 0.2rem solid var(--blue);
-  }
-
-  h3 {
-    margin-top: 2rem;
-    color: var(--green);
+    margin-bottom: 5rem;
+    text-align: center;
+    font-size: 5rem;
   }
 
   p {
@@ -41,20 +35,9 @@ export const Container = styled.section`
     font-weight: 500;
   }
 
-  .about-image {
-    text-align: center;
-    & > div {
-      width: 40rem;
-      margin: 0 auto;
-    }
+  .hero-image {
     img {
-      width: 100%;
-      filter: grayscale(1);
-      transition: filter 0.5s;
-      border-radius: 100%;
-      &:hover {
-        filter: grayscale(0);
-      }
+      max-width: 500px;
     }
   }
 
@@ -76,4 +59,9 @@ export const Container = styled.section`
       justify-content: center;
     }
   }
+`;
+
+export const SkillHeading = styled.h3`
+  margin-top: 2rem;
+  color: ${({ mode }) => (mode ? "var(--darkblue)" : "var(--orange)")};
 `;

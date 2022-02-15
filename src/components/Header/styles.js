@@ -97,7 +97,7 @@ export const Container = styled.header`
     text-indent: -9999px;
     width: 55px;
     height: 30px;
-    background: var(--green);
+    background: var(--orange);
     display: block;
     justify-content: center;
     align-items: center;
@@ -130,7 +130,7 @@ export const Container = styled.header`
   }
 
   input:checked + label {
-    background: var(--pink);
+    background: var(--darkblue);
   }
 
   input:checked + label:after {
@@ -165,7 +165,7 @@ export const Container = styled.header`
       top: 0;
       left: 0;
       transition: opacity 0.25s;
-      background-color: var(--green);
+      background-color: var(--orange);
 
       a.button {
         background-color: var(--pink);

@@ -1,7 +1,7 @@
 import { BrowserRouter } from "react-router-dom";
 import { Container } from "./styles";
 import ScrollAnimation from "react-animate-on-scroll";
-import Illustration from "../../assets/illustration.svg";
+import profile from "../../assets/myDp.jpg";
 import { NavHashLink } from "react-router-hash-link";
 export function Hero() {
   return (
@@ -11,7 +11,9 @@ export function Hero() {
           <p>Hello 👋, I'm</p>
         </ScrollAnimation>
         <ScrollAnimation animateIn="fadeInUp" delay={0.2 * 1000}>
-          <h1>Mahvish Faridi</h1>
+          <h1>
+            <span style={{ color: "var(--orange)" }}>Mahvish</span> Faridi
+          </h1>
         </ScrollAnimation>
         <ScrollAnimation animateIn="fadeInUp" delay={0.4 * 1000}>
           <h3>MERN Stack Developer</h3>
@@ -31,9 +33,9 @@ export function Hero() {
           </BrowserRouter>
         </ScrollAnimation>
       </div>
-      <div className="hero-image">
-        <ScrollAnimation animateIn="fadeInRight" delay={1 * 1000}>
-          <img src={Illustration} alt="Ilustração" />
+      <div className="about-image">
+        <ScrollAnimation animateIn="fadeInRight" delay={0.6 * 1000}>
+          <img src={profile} alt="my-profile-pic" />
         </ScrollAnimation>
       </div>
     </Container>

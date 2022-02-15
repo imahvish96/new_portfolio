@@ -3,12 +3,21 @@ import ScrollAnimation from "react-animate-on-scroll";
 import { portfolio } from "../../languagepack";
 
 export function Portfolio() {
+  const { title, portfolio: projects } = portfolio;
+
+  const [my, project] = title.split(" ");
   return (
     <Container id="portfolio">
-      <h2>{portfolio.title}</h2>
+      <ScrollAnimation animateIn="fadeInLeft">
+        <h2>
+          <span style={{ color: "var(--orange)" }}>{my}</span>
+          &nbsp;
+          {project}
+        </h2>
+      </ScrollAnimation>
 
       <div className="projects">
-        {portfolio.portfolio.map((port) => (
+        {projects.map((port) => (
           <ScrollAnimation animateIn="flipInX">
             <div className="project">
               <header>
@@ -18,7 +27,7 @@ export function Portfolio() {
                   role="img"
                   viewBox="0 0 24 24"
                   fill="none"
-                  stroke="#23ce6b "
+                  stroke="var(--orange)"
                   stroke-width="1"
                   stroke-linecap="round"
                   stroke-linejoin="round"

@@ -4,13 +4,8 @@ import { NavHashLink, HashLink } from "react-router-hash-link";
 import { useState } from "react";
 
 import Curriculo from "../../assets/CV_JoaoTulio.pdf";
-export function Header() {
+export function Header({ toggleTheme }) {
   const [isActive, setActive] = useState(false);
-
-  function toggleTheme() {
-    let html = document.getElementsByTagName("html")[0];
-    html.classList.toggle("light");
-  }
 
   function closeMenu() {
     setActive(false);
@@ -20,7 +15,7 @@ export function Header() {
     <Container className="header-fixed">
       <Router>
         <HashLink smooth to="#home" className="logo">
-          <span>M</span> &nbsp;
+          <span>M</span>
           <span>Faridi</span>
         </HashLink>
 

@@ -6,10 +6,15 @@ import { contact } from "../../languagepack";
 
 export function Contact() {
   const { title, description, email, phone } = contact;
+  const [contacts, me] = title.split(" ");
   return (
     <Container id="contato">
       <header>
-        <h2>{title}</h2>
+        <h2>
+          <span style={{ color: "var(--orange)" }}>{contacts}</span>
+          &nbsp;
+          {me}
+        </h2>
         <p>{description}</p>
       </header>
       <div className="contacts">
