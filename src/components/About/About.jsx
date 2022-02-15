@@ -1,18 +1,27 @@
-import { Container } from "./styles";
-import profile from "../../assets/myDp.jpg";
+import { Container, SkillHeading } from "./styles";
 import ScrollAnimation from "react-animate-on-scroll";
 import { aboutMe, skillsIcon } from "../../languagepack";
 import { styles } from "../../config";
 
-export function About() {
+export function About({ mode }) {
+  const { title, paragraph, skillsHeading } = aboutMe;
+  const [about, me] = title.split(" ");
   return (
     <Container id="about">
       <div className="about-text">
         <ScrollAnimation animateIn="fadeInLeft">
-          <h2>{aboutMe.title}</h2>
+          <h2>
+            <span
+              style={{ color: `${mode ? "var(--darkblue)" : "var(--orange)"}` }}
+            >
+              {about}
+            </span>
+            &nbsp;
+            {me}
+          </h2>
         </ScrollAnimation>
 
-        {aboutMe.paragraph.map((item, i) => (
+        {paragraph.map((item, i) => (
           <ScrollAnimation
             animateIn="fadeInLeft"
             delay={0.2 * 1000}
@@ -23,7 +32,7 @@ export function About() {
         ))}
 
         <ScrollAnimation animateIn="fadeInLeft" delay={0.7 * 1000}>
-          <h3>{aboutMe.skillsHeading}</h3>
+          <SkillHeading mode={mode}>{aboutMe.skillsHeading}</SkillHeading>
         </ScrollAnimation>
 
         <div className="hard-skills">
@@ -36,11 +45,11 @@ export function About() {
           ))}
         </div>
       </div>
-      <div className="about-image">
-        <ScrollAnimation animateIn="fadeInRight" delay={0.6 * 1000}>
-          <img src={profile} alt="Imagem de perfil" />
+      {/* <div className="hero-image">
+        <ScrollAnimation animateIn="fadeInRight" delay={1 * 1000}>
+          <img src={Illustration} alt="Ilustração" />
         </ScrollAnimation>
-      </div>
+      </div> */}
     </Container>
   );
 }

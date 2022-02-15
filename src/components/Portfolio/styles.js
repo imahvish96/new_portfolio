@@ -5,8 +5,8 @@ export const Container = styled.section`
 
   h2 {
     text-align: center;
-    font-size: 4rem;
-    margin-bottom: 10rem;
+    font-size: 5rem;
+    margin-bottom: 5rem;
   }
 
   .projects {
@@ -26,7 +26,7 @@ export const Container = styled.section`
       transition: 0.3s;
       &:hover {
         transform: translateY(-5px);
-        background-color: var(--pink);
+        background-color: var(--darkblue);
         transition: 0.3s;
       }
     }

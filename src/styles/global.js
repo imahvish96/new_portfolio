@@ -7,52 +7,63 @@ export const GlobalStyle = createGlobalStyle`
     --black: #212121;
     --green: #23ce6b;
     --blue: #016fb9;
+    --darkblue: #304cfd;
+    --orange: #f07138;
+    --darkgrey: #44566c;
+    --darkorange: #272333;
+    --lightgrey: #f5f8f9
     scroll-padding-top: 10rem;
+
+    /************************** light mode ************************/
 
     &.light{
 
-      body{
+      body {
         transition: 0.5s;
-        background-color: #f5f5f5;
+        background-color: var(--lightgrey);
         color: var(--black);
       }
 
       .projects {
-        color: var(--black);
+        color: var(--darkgrey);
         & > div {
-      backdrop-filter: blur(16px) saturate(180%);
-      -webkit-backdrop-filter: blur(16px) saturate(180%);
-      background-color: rgba(255, 255, 255, 0.75);
-      border-radius: 12px;
-      border: 1px solid rgba(255, 255, 255, 0.125);
-      transition: 0.3s;
-      color: #000 !important;
-      &:hover {
-        transform: translateY(-5px);
-        background-color: var(--pink);
-        transition: 0.3s;
+          backdrop-filter: blur(16px) saturate(180%);
+          -webkit-backdrop-filter: blur(16px) saturate(180%);
+          background-color: rgba(245, 220, 203, 0.30);
+          border-radius: 12px;
+          ${"" /* border: 2px solid var(--orange); */}
+          transition: 0.3s;
+          color: #000;
+          & > div {
+            color: var(--darkgrey);
+          }
+        &:hover {
+          transform: translateY(-5px);
+          transition: 0.3s;
+        }
       }
     }
-      }
 
-      .logo{
+    /******************** dark mode *****************************/
+
+    .logo {
+      color: var(--darkblue);
+    }
+
+    header.header-fixed {
+      transition: 0.5s;
+      background-color: #f5f5f550;
+      a{
+        transition: 0.5s;
         color: var(--black);
       }
-
-      header.header-fixed{
-        transition: 0.5s;
-        background-color: #f5f5f550;
-        a{
-          transition: 0.5s;
-          color: black;
-        }
-        .menu,.menu:before, .menu:after{
-          background-color: var(--black); 
-        }
-        .menu.active{
-          background-color: rgba(555,555,555,0);
-        }
+      .menu,.menu:before, .menu:after{
+        background-color: var(--darkblue); 
       }
+      .menu.active{
+        background-color: rgba(555,555,555,0);
+      }
+    }
 
       footer.footer{
         transition: 0.5s;
@@ -97,7 +108,7 @@ export const GlobalStyle = createGlobalStyle`
   body{
     font-size: 1.6rem;
     -webkit-font-smoothing: antialiased;
-    background-color: var(--black);
+    background-color: var(--darkorange);
     color: #FFFF;
   }
 
@@ -113,7 +124,7 @@ export const GlobalStyle = createGlobalStyle`
   button, .button{
     border: none;
     cursor: pointer;
-    background-color: var(--green);
+    background-color: var(--orange);
     color: #FFFF;
     border-radius: 2rem;
     font-weight: 500;
@@ -133,7 +144,7 @@ export const GlobalStyle = createGlobalStyle`
     font-size: 3rem;
     color: #FFFF;
     &::first-letter{
-      color: var(--green);
+      color: var(--orange);
     }
   }
   
