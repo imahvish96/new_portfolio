@@ -130,7 +130,7 @@ export const Container = styled.header`
   }
 
   input:checked + label {
-    background: var(--darkblue);
+    background: var(--blue);
   }
 
   input:checked + label:after {
