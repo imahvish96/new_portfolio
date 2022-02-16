@@ -1,7 +1,8 @@
-import { Container } from "./styles";
+import { Container, Logo } from "./styles";
 import { BrowserRouter as Router } from "react-router-dom";
 import { NavHashLink, HashLink } from "react-router-hash-link";
 import { useState } from "react";
+import logo from "../../assets/mf logo.png";
 
 import Curriculo from "../../assets/CV_JoaoTulio.pdf";
 export function Header({ toggleTheme }) {
@@ -15,8 +16,9 @@ export function Header({ toggleTheme }) {
     <Container className="header-fixed">
       <Router>
         <HashLink smooth to="#home" className="logo">
-          <span>M</span>
-          <span>Faridi</span>
+          <Logo>
+            <img src={logo} alt="" />
+          </Logo>
         </HashLink>
 
         <input
@@ -32,13 +34,13 @@ export function Header({ toggleTheme }) {
           <NavHashLink smooth to="#home" onClick={closeMenu}>
             Home
           </NavHashLink>
-          <NavHashLink smooth to="#sobre" onClick={closeMenu}>
+          <NavHashLink smooth to="#about" onClick={closeMenu}>
             About Me
           </NavHashLink>
           <NavHashLink smooth to="#portfolio" onClick={closeMenu}>
             Portfolio
           </NavHashLink>
-          <NavHashLink smooth to="#contato" onClick={closeMenu}>
+          <NavHashLink smooth to="#contact" onClick={closeMenu}>
             Contact
           </NavHashLink>
           <a href={Curriculo} download className="button">

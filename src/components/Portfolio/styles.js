@@ -20,13 +20,13 @@ export const Container = styled.section`
     & > div {
       backdrop-filter: blur(16px) saturate(180%);
       -webkit-backdrop-filter: blur(16px) saturate(180%);
-      background-color: rgba(51, 53, 53, 0.75);
+      background-color: rgba(39, 35, 51, 0.43);
       border-radius: 12px;
       border: 1px solid rgba(255, 255, 255, 0.125);
       transition: 0.3s;
       &:hover {
         transform: translateY(-5px);
-        background-color: var(--darkblue);
+        border: 1px solid var(--orange);
         transition: 0.3s;
       }
     }

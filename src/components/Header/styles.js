@@ -130,7 +130,7 @@ export const Container = styled.header`
   }
 
   input:checked + label {
-    background: var(--darkblue);
+    background: var(--blue);
   }
 
   input:checked + label:after {
@@ -176,5 +176,12 @@ export const Container = styled.header`
         visibility: visible;
       }
     }
+  }
+`;
+
+export const Logo = styled.div`
+  width: 45px;
+  & > img {
+    width: 100%;
   }
 `;

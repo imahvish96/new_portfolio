@@ -2,13 +2,17 @@ import boostrapIcon from "../assets/bootstrap-icon.svg";
 import cssIcon from "../assets/css-icon.svg";
 import htmlIcon from "../assets/html-icon.svg";
 import jsIcon from "../assets/js-icon.svg";
-import mysqlIcon from "../assets/mysql-icon.svg";
 import nodeIcon from "../assets/node-icon.svg";
 import reactIcon from "../assets/react-icon.svg";
 import sassIcon from "../assets/sass-icon.svg";
 import typescriptIcon from "../assets/typescript-icon.svg";
 import vscodeIcon from "../assets/vscode-icon.svg";
 import vueIcon from "../assets/vue-icon.svg";
+import jest from "../assets/jest.svg";
+import rtl from "../assets/rtl.png";
+import python from "../assets/python.svg";
+import mongodb from "../assets/mongodb.svg";
+import graphql from "../assets/graphql.png";
 
 export const partical = {
   fullScreen: {
@@ -158,11 +162,6 @@ export const partical = {
           height: 20,
         },
         {
-          src: mysqlIcon,
-          width: 20,
-          height: 20,
-        },
-        {
           src: nodeIcon,
           width: 20,
           height: 20,
@@ -184,6 +183,31 @@ export const partical = {
         },
         {
           src: vscodeIcon,
+          width: 20,
+          height: 20,
+        },
+        {
+          src: python,
+          width: 20,
+          height: 20,
+        },
+        {
+          src: mongodb,
+          width: 20,
+          height: 20,
+        },
+        {
+          src: graphql,
+          width: 20,
+          height: 20,
+        },
+        {
+          src: rtl,
+          width: 20,
+          height: 20,
+        },
+        {
+          src: jest,
           width: 20,
           height: 20,
         },

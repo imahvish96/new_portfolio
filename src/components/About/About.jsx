@@ -3,7 +3,7 @@ import ScrollAnimation from "react-animate-on-scroll";
 import { aboutMe, skillsIcon } from "../../languagepack";
 import { styles } from "../../config";
 
-export function About({ mode }) {
+export function About() {
   const { title, paragraph, skillsHeading } = aboutMe;
   const [about, me] = title.split(" ");
   return (
@@ -11,11 +11,7 @@ export function About({ mode }) {
       <div className="about-text">
         <ScrollAnimation animateIn="fadeInLeft">
           <h2>
-            <span
-              style={{ color: `${mode ? "var(--darkblue)" : "var(--orange)"}` }}
-            >
-              {about}
-            </span>
+            <span style={{ color: "var(--orange)" }}>{about}</span>
             &nbsp;
             {me}
           </h2>
@@ -32,7 +28,7 @@ export function About({ mode }) {
         ))}
 
         <ScrollAnimation animateIn="fadeInLeft" delay={0.7 * 1000}>
-          <SkillHeading mode={mode}>{aboutMe.skillsHeading}</SkillHeading>
+          <SkillHeading>{aboutMe.skillsHeading}</SkillHeading>
         </ScrollAnimation>
 
         <div className="hard-skills">

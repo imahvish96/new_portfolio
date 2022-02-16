@@ -1,4 +1,4 @@
-import { createGlobalStyle } from "styled-components";
+import { createGlobalStyle, styled } from "styled-components";
 
 export const GlobalStyle = createGlobalStyle`
 
@@ -25,7 +25,7 @@ export const GlobalStyle = createGlobalStyle`
       }
 
       .projects {
-        color: var(--darkgrey);
+        color: var(--black);
         & > div {
           backdrop-filter: blur(16px) saturate(180%);
           -webkit-backdrop-filter: blur(16px) saturate(180%);
@@ -35,7 +35,7 @@ export const GlobalStyle = createGlobalStyle`
           transition: 0.3s;
           color: #000;
           & > div {
-            color: var(--darkgrey);
+            color: var(--black);
           }
         &:hover {
           transform: translateY(-5px);
@@ -44,10 +44,9 @@ export const GlobalStyle = createGlobalStyle`
       }
     }
 
-    /******************** dark mode *****************************/
-
+  
     .logo {
-      color: var(--darkblue);
+      color: var(--black);
     }
 
     header.header-fixed {
@@ -86,6 +85,7 @@ export const GlobalStyle = createGlobalStyle`
     }
   }
 
+/******************** light mode end *****************************/
 
 
   ul, li {
@@ -147,6 +147,4 @@ export const GlobalStyle = createGlobalStyle`
       color: var(--orange);
     }
   }
-  
-
 `;
