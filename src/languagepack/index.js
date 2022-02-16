@@ -10,15 +10,27 @@ import instagramIcon from "../assets/instagram.png";
 import discordIcon from "../assets/discord.png";
 import github from "../assets/github-icon.svg";
 import externalLinkIcon from "../assets/external-link-icon.svg";
+import mui from "../assets/mui.svg";
+import scss from "../assets/sass-icon.svg";
+import jest from "../assets/jest.svg";
+import rtl from "../assets/rtl.png";
+import python from "../assets/python.svg";
+import fastapi from "../assets/fastapi.svg";
+import mongodb from "../assets/mongodb.svg";
+import graphql from "../assets/graphql.png";
 
 export const skillsIcon = [
+  {
+    name: "html",
+    icon: htmlIcon,
+  },
   {
     name: "css",
     icon: cssIcon,
   },
   {
-    name: "html",
-    icon: htmlIcon,
+    name: "scss",
+    icon: scss,
   },
   {
     name: "js",
@@ -33,8 +45,36 @@ export const skillsIcon = [
     icon: reactIcon,
   },
   {
+    name: "mui",
+    icon: mui,
+  },
+  {
     name: "typescript",
     icon: typescriptIcon,
+  },
+  {
+    name: "python",
+    icon: python,
+  },
+  {
+    name: "fastapi",
+    icon: fastapi,
+  },
+  {
+    name: "mongodb",
+    icon: mongodb,
+  },
+  {
+    name: "graphql",
+    icon: graphql,
+  },
+  {
+    name: "jest",
+    icon: jest,
+  },
+  {
+    name: "reactTestingLibrary",
+    icon: rtl,
   },
 ];
 

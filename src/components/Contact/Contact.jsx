@@ -8,7 +8,7 @@ export function Contact() {
   const { title, description, email, phone } = contact;
   const [contacts, me] = title.split(" ");
   return (
-    <Container id="contato">
+    <Container id="contact">
       <header>
         <h2>
           <span style={{ color: "var(--orange)" }}>{contacts}</span>

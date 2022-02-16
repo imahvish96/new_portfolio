@@ -1,4 +1,4 @@
-import { createGlobalStyle } from "styled-components";
+import { createGlobalStyle, styled } from "styled-components";
 
 export const GlobalStyle = createGlobalStyle`
 
@@ -147,6 +147,4 @@ export const GlobalStyle = createGlobalStyle`
       color: var(--orange);
     }
   }
-  
-
 `;

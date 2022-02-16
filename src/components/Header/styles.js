@@ -178,3 +178,10 @@ export const Container = styled.header`
     }
   }
 `;
+
+export const Logo = styled.div`
+  width: 45px;
+  & > img {
+    width: 100%;
+  }
+`;
